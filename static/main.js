@@ -324,15 +324,29 @@ project[3] = `<section id="section2">
 </section>
 `;
 
-let n = 0;
-let projectNo = 1;
-selectProject = ()=>{                
-if (n == 0){
-    n = 1}
-else{ projectNo = document.getElementById("selectProject").value[7];
+//let n = 0;
+//let projectNo = 1;
+//selectProject = ()=>{                
+//if (n == 0){
+  //  n = 1}
+//else{ projectNo = document.getElementById("selectProject").value[7];
     //console.log(projectNo);
-    n = 0;
-    document.getElementById("activeProject").innerHTML = `${project[projectNo]}`;}}; 
+  //  n = 0;
+    //document.getElementById("activeProject").innerHTML = `${project[projectNo]}`;}}; 
 
+if (window.innerWidth < 768){
 
+selectProject = ()=>{                
+    document.getElementById("activeProject").innerHTML = `${project[projectNo]}`;}; 
+} else{
+    let n = 0;
+    let projectNo = 1;
+    selectProject = ()=>{                
+    if (n == 0){
+        n = 1}
+    else{ projectNo = document.getElementById("selectProject").value[7];
+        //console.log(projectNo);
+        n = 0;
+        document.getElementById("activeProject").innerHTML = `${project[projectNo]}`;}};     
+    }
 
