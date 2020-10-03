@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Training Project</title>
+    <link href="{{url_for('static', filename='main.css')}}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body onload='loader'>    
+    <script>
+         loader = setTimeout(() =>{ document.getElementById("preloader").style.display = "none";
+             document.getElementById("activeProject").style.display = "block";
+          },1000);
+     </script>
+    <section id="section1">
+        <div class="title">
+            <p> <div class="rotating">⚙️</div>ML Project</p>
+        </div>
+        <div class="selectDiv">
+            <select id="selectProject"  onclick="selectProject()" >
+                <option value="project0"  >Prediction of Clicking on Adevertisment  📺</option>
+                <option value="project1" >Prediction of weather  ⛈️</option>
+                <option value="project2" >Predict Selling Price Of Car  🚗</option>
+                <option value="project3" >Predict Selling Price Of Motor Cycle  🏍️</option>
+            </select>
+        </div>
+    </section>
+<!------------------------------------------------------------>
+<!------------------------------------------------------------>
+    <div id="preloader" >
+        <p class="rotating">⚙️</p>
+    </div>
+    
+    <div id="activeProject" >
+        <section id="section2"> 
+            <div class="container">
+                <p>📓 In this project we will be working with a fake advertising data set, indicating whether or not a particular internet user clicked on an Advertisement on a company website. We will try to create a model that will predict whether or not they will click on an ad based off the features of that user.
+                    <br><br>The attributes are deﬁned as follows :-
+                    <br>👉 <b>Daily Time Spent on Site:- </b>consumer time on site in minutes 
+                    <br>👉 <b>Age:-</b> cutomer age in years 
+                    <br>👉 <b>Area Income:-</b> Avg. Income of geographical area of consumer 
+                    <br>👉 <b>Daily Internet Usage:-</b> Avg. minutes a day consumer is on the internet
+                    <br>👉 <b>Gender:-</b>  Consumer is male or female             
+                </p>
+            </div>
+            </section>
+            <section id="section3">
+            <div class="container">
+                <form action="/result" method="post">
+                    <!---->
+                    <div style="display: none;">
+                        <input name='decision' type="text" value="1">
+                    </div>
+                    <!---->
+                    <div class="formHeading">
+                    Prediction of Clicking on Adevertisment  📺
+                    </div>
+                    <div class="formContainer">
+                        <div class="formDiv">
+                            <div class="label">
+                                <label title="Daily Time Spent on Site in minutes" for="input1">Daily Time Spent on Site </label>
+                            </div>
+                            <div class="input">
+                                <input name="input1" type="text" id="input1" title="Daily Time Spent on Site in minutes">
+                            </div>
+                        </div>
+                        <div class="formDiv">
+                            <div class="label">
+                                <label title="customer age in years " for="input2">Age</label>
+                            </div>
+                            <div class="input">
+                                <input name="input2" type="text" id="input2" title="customer age in years ">
+                            </div>
+                        </div>
+                        <div class="formDiv">
+                            <div class="label">
+                                <label title="Avg. Income of geographical area of consumer " for="input3">Area Income</label>
+                            </div>
+                            <div class="input">
+                                <input name="input3" type="text" id="input3" title="Avg. Income of geographical area of consumer ">
+                            </div>
+                        </div>
+                        <div class="formDiv">
+                            <div class="label">
+                                <label title="Avg. minutes a day consumer is on the internet" for="input4">Daily Internet Usage</label>
+                            </div>
+                            <div class="input">
+                                <input name="input4" type="text" id="input4" title="Avg. minutes a day consumer is on the internet">
+                            </div>
+                        </div>            
+                        <div class="formDiv">
+                            <div class="label">
+                                <label title="Male or Female" for="input5">Gender</label>
+                            </div>
+                            <div class="input">
+                                <select id="input5" name="input5" title="Male or Female" class="select">
+                                    <option value="0">Female</option>
+                                    <option value="1">Male</option>
+                                </select>
+                            </div>
+                        </div>                         
+                    </div>
+                    <div>
+                        <input type="submit" id="predict" value="Predict">
+                    </div>
+                </form>
+            </div>
+            </section>
+    </div>
+<!------------------------------------------------------------>
+<!------------------------------------------------------------>
+    <section id="section4">     
+        <p>Design & Develop with ❤️</p>
+    </section>
+    <script src="{{url_for('static',filename='main.js')}}" onload='loader'> </script>     
+    
+</body>
+</html>  
