@@ -1,25 +1,18 @@
 *{
     margin: 0;
     padding: 0px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; 
+    box-sizing: border-box; 
     font-family: 'Open Sans', sans-serif;
 }
 body{
     position: relative;
 }
 #preloader{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 570px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 #preloader p{
     font-size: 800%;
@@ -38,10 +31,9 @@ body{
 
 #section1{
     width: 100%;
-    background-color:rgba(38, 50, 56,.75);
+    background-color:rgba(0, 105, 92,1.0);
     padding: 0px 0px 25px 0px;
-    -webkit-box-shadow: 3px 3px 15px rgba(38, 50, 56,.7);
-            box-shadow: 3px 3px 15px rgba(38, 50, 56,.7);
+    box-shadow: 3px 3px 15px rgba(38, 50, 56,.7);
     border-bottom: 2px solid white;
 }
 .title{
@@ -57,37 +49,42 @@ body{
 @-webkit-keyframes rotating /* Safari and Chrome */ {
     from {
       -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     to {
       -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
   @keyframes rotating {
     from {
       -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
       -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     to {
       -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
       -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
   .rotating {
     -webkit-animation: rotating 3.5s linear infinite;
+    -moz-animation: rotating 3.5s linear infinite;
+    -ms-animation: rotating 3.5s linear infinite;
+    -o-animation: rotating 3.5s linear infinite;
     animation: rotating 3.5s linear infinite;
     display: inline-block;
   }
 .selectDiv{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
 }
 #selectProject{
     padding: 5px 10px;
@@ -98,8 +95,7 @@ body{
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     border-color: transparent;
-    -webkit-box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
-            box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
+    box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
     font-size: 13px;
     color: rgba(38, 50, 56,1.0);
 }
@@ -113,16 +109,9 @@ body{
     padding: 0px 15px;
 }
 form{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 25px;
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -130,11 +119,10 @@ form{
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     background-color: rgba(236, 239, 241,1);
-    -webkit-box-shadow: 4px 4px 8px rgba(38, 50, 56,.5);
-            box-shadow: 4px 4px 8px rgba(38, 50, 56,.5);
+    box-shadow: 4px 4px 8px rgba(38, 50, 56,.5);
 }
 .formHeading{
-    background-color: rgba(38, 50, 56,.65);
+    background-color: rgba(0, 105, 92,1.0);
     width: 100%;
     text-align: center;
     border-radius: 12px 12px 0px 0px;
@@ -145,8 +133,7 @@ form{
     padding: 5px 10px 10px 10px;
     color: white;
     font-size: 125%;
-    -webkit-box-shadow: 0px 5px 4px rgba(38, 50, 56,.4);
-            box-shadow: 0px 5px 4px rgba(38, 50, 56,.4);
+    box-shadow: 0px 5px 4px rgba(38, 50, 56,.4);
     font-weight: bold;
     letter-spacing: 1px;
     word-spacing: 2px;
@@ -160,9 +147,8 @@ form{
     letter-spacing: 1px;
     font-weight: bold;
     color: white;
-    background-color:rgba(38, 50, 56,.75);
-    -webkit-box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
-            box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
+    background-color: rgba(0, 105, 92,1.0);
+    box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -176,10 +162,7 @@ form{
     -moz-transform: scale(.95);
     -ms-transform: scale(.95);
     -o-transform: scale(.95);
-    -webkit-transition: -webkit-transform 80ms linear 0ms;
-    transition: -webkit-transform 80ms linear 0ms;
     transition: transform 80ms linear 0ms;
-    transition: transform 80ms linear 0ms, -webkit-transform 80ms linear 0ms;
     -webkit-transition: transform 80ms linear 0ms;
     -moz-transition: transform 80ms linear 0ms;
     -ms-transition: transform 80ms linear 0ms;
@@ -188,32 +171,18 @@ form{
 
 .formContainer{
     padding: 20px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;    
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
     width: 100%;
 }
 .formDiv{
     padding: 11px 10px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 22%;
-            flex: 0 0 22%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    flex: 0 0 22%;
     display: flex;
     color: white;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     font-size: 90%;
     letter-spacing: 1px;
     margin: 10px 0px;
@@ -222,9 +191,11 @@ form{
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
-    background-color: rgba(38, 50, 56,.65);
-    -webkit-box-shadow: 3px 3px 5px rgba(38, 50, 56,1), -4px -4px 5px white;
-            box-shadow: 3px 3px 5px rgba(38, 50, 56,1), -4px -4px 5px white;
+    background: linear-gradient(135deg, white, rgba(0, 105, 92,.85) 18%);
+    box-shadow: 3px 3px 5px rgba(38, 50, 56,1), -4px -4px 5px white;
+}
+.formDiv:hover{
+    background: linear-gradient(135deg, rgba(55, 71, 79,1.0), rgba(0, 105, 92,.85) 18%);
 }
 .label{
     margin: 4px 0px;
@@ -236,8 +207,7 @@ form{
 .select{
     width: 100%;
     border: none; 
-    -webkit-box-shadow: 2px 2px 5px rgba(38, 50, 56,1); 
-            box-shadow: 2px 2px 5px rgba(38, 50, 56,1);   
+    box-shadow: 2px 2px 5px rgba(38, 50, 56,1);   
 }
 select:focus{
     outline: none;
@@ -246,8 +216,7 @@ select:focus{
     width: 100%;
     border: none;
     text-align: center;
-    -webkit-box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
-            box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
+    box-shadow: 3px 3px 5px rgba(38, 50, 56,1);
     color: rgba(38, 50, 56,1);
 }
 .formDiv select{
@@ -272,16 +241,11 @@ input:focus{
 }
 
 #section4{
-    -webkit-box-shadow: -3px -3px 10px rgba(38, 50, 56,.45);
-            box-shadow: -3px -3px 10px rgba(38, 50, 56,.45);
+    box-shadow: -3px -3px 10px rgba(38, 50, 56,.45);
     border-top: 2px solid white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color:rgba(38, 50, 56,.75);
+    justify-content: center;
+    background-color: rgba(0, 105, 92,1.0);
     padding: 10px 0px;
     color: white;
     font-size: 95%;
@@ -315,9 +279,7 @@ input:focus{
         font-size: 12px;
     }
     .formDiv{
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 77%;
-                flex: 0 0 77%;
+        flex: 0 0 77%;
     }
     .formHeading{
         font-size: 107%;
@@ -335,9 +297,7 @@ input:focus{
         font-size: 650%;
     }
     .formDiv{
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 43%;
-                flex: 0 0 43%;
+        flex: 0 0 43%;
     }
     
   }
@@ -349,9 +309,7 @@ input:focus{
         font-size: 700%;
     }
     .formDiv{
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 44%;
-                flex: 0 0 44%;
+        flex: 0 0 44%;
     }
     .formHeading{
         font-size: 110%;
@@ -363,3 +321,4 @@ input:focus{
     }
     
   }
+
